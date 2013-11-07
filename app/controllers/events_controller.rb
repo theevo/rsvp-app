@@ -12,6 +12,10 @@ class EventsController < ApplicationController
     redirect_to new_event_invite_path(e)
   end
 
+  def show
+    @event = Event.find(params[:id])
+  end
+
   private
     def valid_event_params
       params.require(:event).permit(:name, :time)

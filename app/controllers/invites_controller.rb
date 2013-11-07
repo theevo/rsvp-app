@@ -13,6 +13,7 @@ class InvitesController < ApplicationController
         :guest_id => user.id,
         :event_id => event_id)
     end
+    redirect_to :root
   end
 
   private
