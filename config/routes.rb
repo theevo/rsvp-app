@@ -1,4 +1,6 @@
 RsvpApp::Application.routes.draw do
+  root 'events#index'
+
   resources :users
 
   resources :events do

@@ -5,5 +5,6 @@
 <div class="field">
   <%= label_tag "invite[guest_list]", "Guests:" %>
   <%= text_field_tag("invite[guest_list]", nil, placeholder: 'Jane, Jon, Annie') %>
+  <%= hidden_field_tag "invite[event_id]", @invite.event_id %>
 </div>
 <%= submit_tag("Invite them!") %>
