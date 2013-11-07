@@ -1,0 +1,5 @@
+<h1>All Events</h1>
+<% @events.each do |event| %>
+  <p><%= event.name %> is happening <%= event.time %></p>
+<% end %>
+<%= link_to "Create New Event", new_event_path %>

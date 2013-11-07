@@ -1,0 +1,9 @@
+<h1><%= @invite.event.name %></h1>
+<h2>Who are we inviting?</h2>
+
+<%= form_tag(invites_path, method: "post") %>
+<div class="field">
+  <%= label_tag "invite[guest_list]", "Guests:" %>
+  <%= text_field_tag("invite[guest_list]", nil, placeholder: 'Jane, Jon, Annie') %>
+</div>
+<%= submit_tag("Invite them!") %>
